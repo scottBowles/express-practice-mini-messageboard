@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each message in messages
+    h2= message.user
+    p= message.text
+    time(datetime=message.added)= message.added
+  p Add a #[a(href='/new') new post]!

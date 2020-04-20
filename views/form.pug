@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/new")
+    input(type="text" name="user" placeholder="Name")
+    br
+    textarea(name="message" cols="50" rows="6" placeholder="Your message here")
+    br
+    input(type="submit" name="submit" value="Submit")
+  p Nevermind. Take me back to the #[a(href='/') messageboard].
